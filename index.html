@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Raysahri S.M</title>
+    <!-- Tailwind CSS v3 CDN (Lebih Stabil untuk Custom Dark Mode Class) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Konfigurasi Tailwind untuk mendeteksi dark mode berdasarkan class 'dark'
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome untuk Icon Terkini -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-sm z-50 transition-colors duration-300 border-b border-slate-100 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">Raysahri.</a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="#profil" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Profil</a>
+                <a href="#pengalaman" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Pengalaman</a>
+                <a href="#keahlian" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Keahlian</a>
+                <a href="#pendidikan" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Pendidikan</a>
+                <button id="dark-mode-toggle" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:scale-105 transition-all active:scale-95 cursor-pointer">
+                    <i class="fas fa-moon text-lg dark:hidden"></i>
+                    <i class="fas fa-sun text-lg hidden dark:block text-amber-400"></i>
+                </button>
+            </div>
+
+            <!-- Tombol Mobile Menu -->
+            <div class="flex items-center md:hidden space-x-3">
+                <button id="dark-mode-toggle-mobile" class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 cursor-pointer">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-amber-400"></i>
+                </button>
+                <button id="menu-btn" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-lg cursor-pointer">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-950 px-6 py-4 space-y-3 shadow-xl border-t border-slate-100 dark:border-slate-800">
+            <a href="#profil" class="mobile-link block font-medium hover:text-blue-600 py-2 border-b border-slate-50 dark:border-slate-900">Profil</a>
+            <a href="#pengalaman" class="mobile-link block font-medium hover:text-blue-600 py-2 border-b border-slate-50 dark:border-slate-900">Pengalaman</a>
+            <a href="#keahlian" class="mobile-link block font-medium hover:text-blue-600 py-2 border-b border-slate-50 dark:border-slate-900">Keahlian</a>
+            <a href="#pendidikan" class="mobile-link block font-medium hover:text-blue-600 py-2">Pendidikan</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Profil Section -->
+    <section id="profil" class="pt-28 pb-16 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-center min-h-screen">
+        <div class="md:col-span-1 flex justify-center order-1 md:order-2">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 group transition duration-500 hover:shadow-blue-500/10 dark:hover:shadow-blue-400/10">
+                <img src="assets/img/Pas Foto wisuda.jpg" alt="Raysahri S.M" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+            </div>
+        </div>
+        <div class="md:col-span-2 space-y-6 text-center md:text-left order-2 md:order-1">
+            <div>
+                <span class="inline-flex bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-3 border border-blue-200/40 dark:border-blue-800/40">
+                    Sarjana Manajemen
+                </span>
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+                    Raysahri S.M
+                </h1>
+            </div>
+            <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                Sarjana Manajemen dengan pengalaman kerja solid di bidang administrasi dan operasional. Memiliki keahlian dalam mengelola database, verifikasi dokumen, serta dukungan operasional organisasi. Dikenal memiliki ketelitian tinggi, mampu bekerja di bawah tekanan target, dan memiliki kemampuan adaptasi yang cepat di lingkungan kerja yang dinamis.
+            </p>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4 pt-4 text-sm font-medium">
+                <a href="mailto:raysahri99@gmail.com" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3.5 rounded-2xl shadow-lg shadow-blue-500/20 dark:shadow-blue-600/10 transition-all hover:-translate-y-0.5 active:translate-y-0 gap-2 cursor-pointer">
+                    <i class="fas fa-envelope"></i> Hubungi Saya
+                </a>
+                <div class="inline-flex items-center justify-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 px-5 py-3.5 rounded-2xl text-slate-600 dark:text-slate-300">
+                    <i class="fas fa-map-marker-alt text-blue-500"></i> Pidie Jaya – Aceh
+                </div>
+                <div class="inline-flex items-center justify-center gap-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700/60 px-5 py-3.5 rounded-2xl text-slate-600 dark:text-slate-300">
+                    <i class="fas fa-phone text-blue-500"></i> 0822 7711 5305
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja Section -->
+    <section id="pengalaman" class="bg-slate-100 dark:bg-slate-800/40 py-24 px-6 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-center mb-16 tracking-tight text-slate-900 dark:text-white flex items-center justify-center gap-3">
+                <span class="w-8 h-1 bg-blue-600 rounded"></span>
+                Pengalaman Kerja
+                <span class="w-8 h-1 bg-blue-600 rounded"></span>
+            </h2>
+            
+            <div class="space-y-12 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-[2px] before:bg-slate-200 dark:before:bg-slate-700">
+                
+                <!-- Pengalaman 1 -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-600 transform -translate-x-1/2 border-4 border-slate-100 dark:border-slate-900 group-hover:scale-120 transition duration-300 z-10 shadow-md"></div>
+                    <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
+                        <span class="inline-block bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold px-3 py-1 rounded-lg text-xs mb-1">2025–2026</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Staff Operasional</h3>
+                        <p class="text-slate-500 dark:text-slate-400 font-semibold text-sm">CV Norif</p>
+                    </div>
+                    <div class="pl-12 md:pl-12 md:w-1/2 pt-2 md:pt-0">
+                        <ul class="list-disc list-outside space-y-2 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            <li>Mengoperasikan dan melakukan pemeliharaan rutin pada mesin cetak digital untuk memastikan stabilitas produksi harian.</li>
+                            <li>Bertanggung jawab penuh atas kontrol kualitas (*Quality Control*) pada hasil cetakan guna meminimalisir tingkat kegagalan produk (*reject*).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-600 transform -translate-x-1/2 border-4 border-slate-100 dark:border-slate-900 group-hover:scale-120 transition duration-300 z-10 shadow-md"></div>
+                    <div class="pl-12 md:pl-12 md:w-1/2 md:order-2">
+                        <span class="inline-block bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold px-3 py-1 rounded-lg text-xs mb-1">2022–2024</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Staff Administrasi dan Data</h3>
+                        <p class="text-slate-500 dark:text-slate-400 font-semibold text-sm">Dinas Perindustrian Perdagangan dan Koperasi UKM</p>
+                        <p class="text-xs text-slate-400 mt-0.5"><i class="fas fa-map-marker-alt"></i> Pidie Jaya</p>
+                    </div>
+                    <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right md:order-1 pt-2 md:pt-0">
+                        <ul class="list-none md:inline-block text-left list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            <li>Mengelola database digital dan fisik untuk arsip data UMKM guna mempercepat efisiensi proses verifikasi internal.</li>
+                            <li>Memberikan pendampingan intensif bagi pelaku UMKM dalam melengkapi berkas administrasi, Pengajuan KUR hingga tahap pencairan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 3 -->
+                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
+                    <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-600 transform -translate-x-1/2 border-4 border-slate-100 dark:border-slate-900 group-hover:scale-120 transition duration-300 z-10 shadow-md"></div>
+                    <div class="pl-12 md:pl-0 md:w-1/2 md:pr-12 md:text-right">
+                        <span class="inline-block bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold px-3 py-1 rounded-lg text-xs mb-1">2018–2020</span>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Staff Lapangan</h3>
+                        <p class="text-slate-500 dark:text-slate-400 font-semibold text-sm">Dinas Perhubungan Kota Bekasi</p>
+                        <p class="text-xs text-slate-400 mt-0.5"><i class="fas fa-map-marker-alt"></i> Bekasi</p>
+                    </div>
+                    <div class="pl-12 md:pl-12 md:w-1/2 pt-2 md:pt-0">
+                        <ul class="list-disc list-inside space-y-2 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                            <li>Bertugas sebagai Pengawas Lalu Lintas untuk memastikan kelancaran arus transportasi di area yang ditentukan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian Section -->
+    <section id="keahlian" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-center mb-16 tracking-tight text-slate-900 dark:text-white flex items-center justify-center gap-3">
+            <span class="w-8 h-1 bg-blue-600 rounded"></span>
+            Keahlian & Kompetensi
+            <span class="w-8 h-1 bg-blue-600 rounded"></span>
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Software -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition duration-300">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Software</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Microsoft Office Expert (Excel, Word, PowerPoint)</p>
+            </div>
+
+            <!-- Administrasi -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:shadow-green-500/5 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-12 h-12 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition duration-300">
+                    <i class="fas fa-folder-open"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Administrasi</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Manajemen & Audit Data, Administrasi Perkantoran</p>
+            </div>
+
+            <!-- Logistik -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:shadow-purple-500/5 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-12 h-12 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition duration-300">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Logistik</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Manajemen Logistik & Distribusi</p>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 hover:shadow-xl hover:shadow-amber-500/5 hover:-translate-y-1 transition duration-300 group">
+                <div class="w-12 h-12 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition duration-300">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Soft Skills</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Ketelitian Tinggi, Manajemen Waktu, Komunikasi Interpersonal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan Section -->
+    <section id="pendidikan" class="bg-slate-100 dark:bg-slate-800/40 py-24 px-6 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold mb-16 tracking-tight text-slate-900 dark:text-white flex items-center justify-center gap-3">
+                <span class="w-8 h-1 bg-blue-600 rounded"></span>
+                Pendidikan
+                <span class="w-8 h-1 bg-blue-600 rounded"></span>
+            </h2>
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700/30 inline-block max-w-xl w-full text-left transform hover:-translate-y-1 transition duration-300 group hover:shadow-xl">
+                <div class="flex flex-col sm:flex-row justify-between items-start gap-4">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 text-xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">S1 Manajemen</h3>
+                            <p class="text-blue-600 dark:text-blue-400 font-semibold text-sm mt-0.5">Universitas Muhammadiyah Aceh</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fas fa-map-marker-alt"></i> Aceh</p>
+                        </div>
+                    </div>
+                    <span class="bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300 text-xs px-3 py-1.5 rounded-xl font-bold border border-green-200/50 dark:border-none self-start sm:self-auto">
+                        Lulus Tahun 2026
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-950 border-t dark:border-slate-900 py-10 px-6 text-center text-sm text-slate-500 transition-colors duration-300">
+        <p class="font-medium">&copy; 2026 Raysahri S.M. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Interaktif Terkini -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup mobile menu otomatis jika salah satu link diklik
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Logika Pengendali / Toggle Dark Mode
+        const toggleDarkMode = () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        };
+
+        // Inisialisasi awal tema saat web dibuka
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Event Listener untuk Tombol Tema
+        document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
+        document.getElementById('dark-mode-toggle-mobile').addEventListener('click', toggleDarkMode);
+    </script>
+</body>
+</html>
